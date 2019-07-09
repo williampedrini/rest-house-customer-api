@@ -1,0 +1,5 @@
+bootRun {
+    environment 'OAUTH_CHECK_TOKEN_URL', project.property('environment.development.oauthCheckTokenUrl')
+    environment 'OAUTH_CLIENT_ID', project.property('environment.development.oauthClientId')
+    environment 'OAUTH_CLIENT_SECRET', project.property('environment.development.oauthClientSecret')
+}
