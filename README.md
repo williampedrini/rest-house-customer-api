@@ -49,10 +49,55 @@ Please follow the steps defined on the following links, depending on your IDEA.
 * [Lombok Eclipse](https://projectlombok.org/setup/eclipse) - Installing lombok on Eclipse.
 * [Lombok Intellij](https://projectlombok.org/setup/intellij) - Installing lombok on Intellij.
 
-### Running in Development Mode
+## Running in Development Mode
 
 To run the API execute the following command:
 
 ```
  gradle -Penvironment=development bootRun
+```
+
+## Publishing Images to Docker Hub
+
+1. Log in into docker using the following command:
+
+    ```
+    docker login
+    ```
+
+2. Publish the new Image using the following command:
+
+    ```
+    gradle dockerPush
+    ```
+
+## Running Tests
+
+#### Prerequisites
+
+What things you need to run the tests:
+
+```
+Postman
+```
+
+#### Postman
+
+1) Download [Postman](https://www.getpostman.com/downloads/) and install it.
+2) Import the postman [local](postman/local.environment.json) environment.
+3) Import the postman [authorization](postman/authorization.collection.json) collection.
+4) Import the postman [customer](postman/customer.collection.json) collection.
+
+#### Example
+
+Perform a call to generate the authorization token via Authorization -> Generate Token. The result must follow the pattern below:
+
+```
+{
+    "access_token": "c53edc32-51a3-4666-b8d6-8fb4d521f586",
+    "token_type": "bearer",
+    "refresh_token": "bf4b311e-16ca-4eb0-b4fc-f6b6e496739f",
+    "expires_in": 10799,
+    "scope": "read write"
+}
 ```
