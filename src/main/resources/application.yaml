@@ -13,7 +13,7 @@ spring:
     oauth2:
       resource-server:
         id: RestHouseCustomerApi
-        check-token-url: ${OAUTH_CHECK_TOKEN_URL}
+        check-token-url: ${CUSTOMER_AUTH_CHECK_TOKEN_URL}
       client:
-        id: ${OAUTH_CLIENT_ID}
-        secret: ${OAUTH_CLIENT_SECRET}
+        id: ${CUSTOMER_AUTH_CLIENT_ID}
+        secret: ${CUSTOMER_AUTH_CLIENT_SECRET}
