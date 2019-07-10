@@ -5,28 +5,26 @@
     {
       "key": "rest-house-auth-server-protocol",
       "value": "http",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
       "enabled": true
     },
     {
       "key": "rest-house-auth-server-host",
       "value": "localhost",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
       "enabled": true
     },
     {
       "key": "rest-house-auth-server-port",
       "value": "8080",
-      "description": {
-        "content": "",
-        "type": "text/plain"
-      },
+      "enabled": true
+    },
+    {
+      "key": "authorization-token",
+      "value": "cbedfb94-8afa-4812-8b97-4cad57888677",
+      "enabled": true
+    },
+    {
+      "key": "rest-house-auth-server",
+      "value": "{{rest-house-auth-server-protocol}}://{{rest-house-auth-server-host}}:{{rest-house-auth-server-port}}/auth",
       "enabled": true
     },
     {
@@ -53,6 +51,11 @@
       "value": "http",
       "type": "text",
       "description": "",
+      "enabled": true
+    },
+    {
+      "key": "rest-house-customer-api",
+      "value": "{{rest-house-customer-api-protocol}}://{{rest-house-customer-api-host}}:{{rest-house-customer-api-port}}/api",
       "enabled": true
     }
   ],
